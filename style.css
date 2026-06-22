@@ -1,0 +1,169 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #003CBF 0%, #ffffff 100%);
+    color: #333;
+    text-align: center;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+    padding: 40px 20px;
+}
+
+.logo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.header h1 {
+    color: white;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* CARDS */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    width: 280px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    font-size: 40px;
+    color: #003CBF;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    background: #003CBF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background .3s ease;
+}
+
+.card a:hover {
+    background: #002b8a;
+}
+
+.card a:focus {
+    outline: 3px solid #7da7ff;
+    outline-offset: 3px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    padding: 25px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* BOTÃO TOPO */
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #003CBF;
+    color: white;
+    border: none;
+    padding: 14px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background .3s ease, transform .3s ease;
+    z-index: 1000;
+}
+
+#topBtn:hover {
+    background: #002b8a;
+    transform: translateY(-3px);
+}
+
+/* ANIMAÇÃO */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .header {
+        padding: 30px 15px;
+    }
+
+    .logo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .cards-container {
+        gap: 20px;
+    }
+}
